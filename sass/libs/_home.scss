@@ -83,3 +83,26 @@ $bold: 600;
     }
 }
 
+#fonctionnement{
+    margin: 6vh 3vh;
+
+    .fonctionnement--container{
+        margin: 2vh;
+
+        &__carte{
+            display: flex;
+            background: #f6f6f6;
+            margin: 2vh;
+            padding: 3vh;
+            border-radius: 20px;
+
+            p{
+                padding-left: 15px;
+                font-weight: 400;
+            }
+
+        }
+
+
+    }
+}
