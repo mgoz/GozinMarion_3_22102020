@@ -1,4 +1,7 @@
 $bold: 600;
+$violet: hsla(267, 66%, 60%, 1);
+$rose: hsla(317, 100%, 74%, 1);
+$turquoise: hsla(165, 56%, 74%, 1);
 
 @mixin flex-center {
     display: flex;
@@ -92,12 +95,25 @@ $bold: 600;
         &__carte{
             display: flex;
             background: #f6f6f6;
-            margin: 2vh;
+            margin: 20px 0px;
             padding: 3vh;
             border-radius: 20px;
+            position: relative;
 
             p{
                 padding-left: 15px;
+                font-weight: 400;
+            }
+            
+            &__number{
+                position: absolute;
+                left: -10px;
+                bottom: 20px;
+                border-radius: 50%;
+                background: $violet ;
+                padding: 3px 6px;
+                font-size: 12px;
+                color: #fff;
                 font-weight: 400;
             }
 
