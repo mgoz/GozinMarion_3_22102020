@@ -1,6 +1,6 @@
 # GozinMarion_3_22102020
 
-*Dans le cadre de la formation Développeur Web voici le troisième projet qui se focalise sur l'apprentissage du langage SASS et la mise en place d'effets graphiques avancés*
+*Dans le cadre de la formation Développeur Web, le troisième projet à pour but l'apprentissage des effets graphiques avancés et la structuration du code en appliquant la structure BEM et en utilisant le préprocesseurs **SASS** *.
 
 ## Le projet 
 
