@@ -296,13 +296,28 @@ a{
 
             padding: 2vh 1vh;
 
+            @include tablet{
+                padding: 2vh 3vh;
+                line-height: 3vh;
+            }
+
             .icone-coeur-vide{
             color: black;
                 :hover{
                     color: #fff;
                     display: none;
                 }
+                i{
+                    @include tablet{
+                        font-size: 24px;
+                        right: 25px;
+                        bottom: 28px;
+                    }
+                }
+                          
             }
+
+            
 
             .icone-coeur-plein{
                 color: transparent;
@@ -319,6 +334,11 @@ a{
                     transform: scale(0.8);
                     transition-property: transform;
                     transition-duration: 1000ms;
+
+                    @include tablet{
+                        right: 25px;
+                        bottom: 28px;
+                    }
                     
                 }
             }
