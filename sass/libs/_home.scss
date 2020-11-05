@@ -322,6 +322,11 @@ a{
     @include lg{
         padding-top: 8vh;
     }
+    h2 {
+        @include xl{
+            margin-left: 2vh;
+        }
+    }
 }
 
 .restaurants__container{
@@ -329,6 +334,10 @@ a{
     @include lg{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @include xl{
         justify-content: space-evenly;
     }
 
@@ -343,6 +352,10 @@ a{
         margin: 2vh 0vh 5vh;
     }
 
+    @include xl{
+        margin: 2vh 10px;
+    }
+
         &--img{
         
         height: 180px; 
@@ -352,11 +365,12 @@ a{
         }
 
         @include lg{
-            width: 60vh;
+            width: 50vh;
         }
 
         @include xl{
-            width: 70vh;
+            width: 40vh;
+            height: 25vh;
         }
 
             img{
@@ -468,6 +482,14 @@ footer{
         
     }
 
+    @include lg{
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 5vh ;
+    }
+
     a{
         color: #fff;
         &:hover{
@@ -478,6 +500,12 @@ footer{
     img{
         width: 30%;
         padding: 2vh 0vh;
+
+        @include lg{
+            width: 15%;
+            padding-left: 5vh;
+            padding-top: 0vh;
+        }
     }
 
     .icone-footer{
