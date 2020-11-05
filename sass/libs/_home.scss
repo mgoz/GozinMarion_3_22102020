@@ -1,3 +1,5 @@
+@import "_responsive.scss";
+
 $bold: 600;
 $violet: hsla(267, 66%, 60%, 1);
 $rose: hsla(317, 100%, 74%, 1);
@@ -38,7 +40,7 @@ a{
 
     input{
         background: #efefef;
-        border: none;
+        border: 1px solid transparent;
         margin-left:5px;
         padding: 8px;
         font-size: 16px;
@@ -70,14 +72,28 @@ a{
     text-align: center;
     padding: 3vh 5vh;
     background: #f6f6f6;
+
+    @include tablet{
+        padding: 8vh;
+        line-height: 4vh;
+    }
+
     h1{
         font-size: 22px;
         font-weight: $bold;
         padding: 2vh 3vh;
+
+        @include tablet{
+            font-size: 30px;
+        }
     }
 
     p{
         font-size: 15px;
+
+        @include tablet {
+            font-size: 18px;
+        }
     }
 
 }
@@ -93,7 +109,11 @@ a{
     transition: transform 300ms;
 
     &:hover{
-        transform: scale(1.15);   
+        transform: scale(1.15);  
+        
+        @include tablet{
+            transform: scale(1.10);
+        }
     }
 
     a{
@@ -102,8 +122,16 @@ a{
         text-decoration: none;  
         font-weight: 400; 
         font-size: 14px; 
+
+        @include tablet{
+            font-size: 25px;
+        }
     }
 
+    @include tablet {
+        padding: 30px;
+        margin: 30px 40px;
+    }
 
 }
 
