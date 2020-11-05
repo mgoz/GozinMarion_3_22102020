@@ -1,1 +1,32 @@
-// $medium-up: "(only screen and min-width: 768px)"
+ 
+// Small tablets (portrait view)
+$screen-tablet-min: 768px;
+ 
+// Tablets and small desktops
+$screen-lg-min: 992px;
+ 
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+  
+ // Medium devices
+ @mixin tablet {
+    @media (min-width: #{$screen-tablet-min}) {
+        @content;
+    }
+ }
+  
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+  
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+  
