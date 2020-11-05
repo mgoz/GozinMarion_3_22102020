@@ -366,8 +366,18 @@ footer{
     font-size: 14px;
     font-weight: 400;
 
+    @include tablet{
+        padding-left: 8vh;
+        font-size: 18px;
+        line-height: 5vh;
+        
+    }
+
     a{
         color: #fff;
+        &:hover{
+           color: $turquoise;
+        }
     }
 
     img{
@@ -379,9 +389,16 @@ footer{
         display: flex;
         flex-direction: row;
         i{
-            font-size: 13px;
             padding: 6px 15px 6px 0vh;
-            
+            order:1;
+        }
+
+        a{
+            order:2;
+
+            &:hover + i{
+                color: $turquoise;
+            }
         }
 
         .fa-utensils{
