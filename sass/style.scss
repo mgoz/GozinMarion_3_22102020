@@ -19,6 +19,12 @@ body {
 h2{
   font-size: 20px;
   font-weight: $bold;
+
+  @include tablet{
+    text-align: center;
+    padding-bottom: 2vh;
+    font-size: 25px;
+  }
 }
 
 
