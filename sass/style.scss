@@ -25,6 +25,12 @@ h2{
     padding-bottom: 2vh;
     font-size: 25px;
   }
+
+  @include xl{
+    font-size: 30px;
+    padding: 2vh 5vh 5vh 12vh;
+    text-align: left;
+  }
 }
 
 h3{
