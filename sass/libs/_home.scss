@@ -29,6 +29,17 @@ a{
     margin: 3vh;
     img{
         width: 40%;
+
+        @include lg{
+            width: 15%;
+        }
+    }
+
+    @include lg{
+        position: relative;
+        display: flex;
+        justify-content: left;
+        padding-left: 2vh;
     }
 }
 
@@ -40,9 +51,24 @@ a{
     align-items: center;
     padding: 2vh;
 
+    @include lg{
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        background: transparent;
+        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0);
+
+    }
+
+    @include xl{
+        top: 8px;
+        right: 70px;
+    }
+
     i{
         padding-left: 50px;
         color: #000;
+        font-size: 20px;
     }
 
     input{
@@ -51,6 +77,11 @@ a{
         margin-left:5px;
         padding: 8px;
         font-size: 16px;
+
+        @include lg{
+            background: #fff;
+            font-size: 20px;
+        }
 
         &::placeholder{
             color: black;
@@ -114,6 +145,7 @@ a{
     text-align: center;
     transform: scale(1);
     transition: transform 300ms;
+    cursor: pointer;
 
     &:hover{
         transform: scale(1.15);  
@@ -140,6 +172,12 @@ a{
         margin: 30px 40px;
     }
 
+    @include lg{
+        margin: 30px 100px;
+    }
+    @include xl{
+        margin: 30px 130px;
+    }
 }
 
 #fonctionnement{
@@ -280,12 +318,18 @@ a{
     @include tablet{
         padding: 6vh;
     }
+
+    @include lg{
+        padding-top: 8vh;
+    }
 }
 
 .restaurants__container{
 
     @include lg{
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     &--carte{
@@ -306,6 +350,11 @@ a{
         @include tablet{
             height: 240px;
         }
+
+        @include lg{
+            width: 80vh;
+        }
+
             img{
                 border-radius: 15px 15px 0px 0px;
                 object-fit: cover;
