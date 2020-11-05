@@ -138,10 +138,21 @@ a{
 #fonctionnement{
     margin: 6vh 3vh;
 
+    h2{
+        @include tablet{
+            text-align: center;
+            padding-bottom: 2vh;
+            font-size: 25px;
+        }
+    }
 
     .fonctionnement--container{
         margin: 2vh;
         cursor: pointer;
+
+        @include tablet{
+            margin: 5vh;
+        }
 
         &__carte{
             display: flex;
@@ -152,17 +163,26 @@ a{
             border-radius: 20px;
             position: relative;
 
+            @include tablet{
+                padding: 5vh;      
+            }
+
             &:hover{
                 background: hsla(267, 66%, 60%, 0.33);
                 transition: background 0.5s;
                 
             }
 
-
             p{
                 order:2;
                 padding-left: 15px;
                 font-weight: 400;
+
+                @include tablet{
+                  padding-left: 20px;
+                  font-size: 20px;  
+                }
+
                 &:hover{
                     background: transparent;
                 }
@@ -176,6 +196,10 @@ a{
             i{
                 color: #797979;
                 order: 1;
+                
+                @include tablet{
+                    font-size: 25px;
+                }
             }
 
 
@@ -191,6 +215,12 @@ a{
                 color: #fff;
                 font-weight: 400;
 
+                @include tablet{
+                    bottom: 35px;
+                    left: -16px;
+                    font-size: 20px;
+                    padding: 6px 12px;
+                }
 
             }
 
