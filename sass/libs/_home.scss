@@ -12,6 +12,13 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     justify-content: center;
 }
 
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+
 a{
     color: black;
     text-decoration: none;
@@ -138,8 +145,13 @@ a{
 #fonctionnement{
     margin: 6vh 3vh;
 
+
     @include tablet{
         margin: 6vh 3vh 9vh 3vh;
+    }
+
+    @include lg{
+        margin: 3vh;
     }
 
     h2{
@@ -147,6 +159,10 @@ a{
             text-align: center;
             padding-bottom: 2vh;
             font-size: 25px;
+        }
+
+        @include lg{
+            display: none;
         }
     }
 
@@ -156,6 +172,12 @@ a{
 
         @include tablet{
             margin: 3vh 5vh 5vh 5vh;
+        }
+
+        @include lg{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
 
         &__carte{
@@ -169,6 +191,14 @@ a{
 
             @include tablet{
                 padding: 5vh;      
+            }
+
+            @include lg{
+                padding: 3vh 2vh;
+            }
+
+            @include xl{
+                padding: 5vh;
             }
 
             &:hover{
@@ -185,6 +215,14 @@ a{
                 @include tablet{
                   padding-left: 20px;
                   font-size: 20px;  
+                }
+
+                @include lg{
+                    font-size: 18px;
+                }
+
+                @include xl{
+                    font-size: 20px;
                 }
 
                 &:hover{
@@ -245,6 +283,10 @@ a{
 }
 
 .restaurants__container{
+
+    @include lg{
+
+    }
 
     &--carte{
     cursor: pointer;    
