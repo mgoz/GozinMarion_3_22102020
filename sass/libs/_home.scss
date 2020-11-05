@@ -352,7 +352,11 @@ a{
         }
 
         @include lg{
-            width: 80vh;
+            width: 60vh;
+        }
+
+        @include xl{
+            width: 70vh;
         }
 
             img{
