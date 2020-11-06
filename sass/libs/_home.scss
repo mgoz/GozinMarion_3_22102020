@@ -16,7 +16,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 /* Absolute Center Spinner */
 .loading {
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     height: 2em;
     width: 2em;
     overflow: visible;
@@ -36,25 +36,13 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
-
+    background: $degrade-rose;
   }
   
-  /* :not(:required) hides these rules from IE9 and below */
-  .loading:not(:required) {
-    /* hide "loading..." text */
-    font: 0/0 a;
-    color: transparent;
-    text-shadow: none;
-    background-color: transparent;
-    border: 0;
-
-  }
-  
-  .loading:not(:required):after {
+    .loading:after {
     content: '';
     display: block;
-    font-size: 10px;
+    font-size: 20px;
     width: 1em;
     height: 1em;
     margin-top: -0.5em;
@@ -65,10 +53,24 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     animation: spinner 1500ms infinite linear;
     border-radius: 0.5em;
     -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
-    box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(224, 224, 224, 0.75) 1.1em 1.1em 0 0, rgba(182, 181, 181, 0.75) 0 1.5em 0 0, rgba(153, 152, 152, 0.75) -1.1em 1.1em 0 0, rgba(124, 124, 124, 0.75) -1.5em 0 0 0, rgba(87, 86, 86, 0.75) -1.1em -1.1em 0 0, rgba(37, 37, 37, 0.75) 0 -1.5em 0 0, rgba(20, 20, 20, 0.75) 1.1em -1.1em 0 0;
 
 }
+
+.loading.hidden {
+    animation: fadeOut 6s;
+    animation-fill-mode: forwards;
+}
   
+
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
   /* Animation */
   
   @-webkit-keyframes spinner {
