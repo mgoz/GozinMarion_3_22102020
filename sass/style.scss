@@ -10,10 +10,34 @@ $rose: hsla(317, 100%, 74%, 1);
 $turquoise: hsla(165, 56%, 74%, 1);
 $bold: 500;
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
+}
+
+.header--sur{
+  @include flex-center;
+  margin: 3vh;
+  img{
+      width: 40%;
+
+      @include lg{
+          width: 15%;
+      }
+  }
+
+  @include lg{
+      position: relative;
+      display: flex;
+      justify-content: left;
+      padding-left: 2vh;
+  }
 }
 
 h2{
