@@ -72,6 +72,10 @@ footer{
       &:hover{
          color: $turquoise;
       }
+
+      @include landscape{
+        line-height: 6vh;
+      }
   }
 
   img{
@@ -79,9 +83,9 @@ footer{
       padding: 2vh 0vh;
 
       @include lg{
-          width: 15%;
-          padding-left: 5vh;
-          padding-top: 0vh;
+          width: 10%;
+          height: 100%;
+          padding-left: 1vh;
       }
   }
 
@@ -89,8 +93,12 @@ footer{
       display: flex;
       flex-direction: row;
       i{
-          padding: 6px 15px 6px 0vh;
+          padding: 1vh 1vh 1vh 0vh;
           order:1;
+
+          @include lg{
+            padding-top: 2vh;
+          }
       }
 
       a{
@@ -101,9 +109,6 @@ footer{
           }
       }
 
-      .fa-utensils{
-          padding: 6px 20px 6px 0vh;
-      }
   }
 }
 

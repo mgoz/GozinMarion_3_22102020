@@ -29,4 +29,10 @@ $screen-xl-min: 1200px;
         @content;
     }
  }
+
+@mixin landscape{ 
+ @media all and (orientation:landscape) {
+        @content;
+  }
+}  
   
