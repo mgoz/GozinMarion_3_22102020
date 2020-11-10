@@ -7,7 +7,7 @@ $turquoise: hsla(165, 56%, 74%, 1);
 $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 
 .bandeau-image{
-    width: 100px;
+    width: 100vw;
 
     img{
         object-fit: cover;
