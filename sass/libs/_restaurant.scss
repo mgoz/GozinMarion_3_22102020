@@ -16,3 +16,58 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     }
 
 }
+
+.title-restaurant{
+
+    position: relative;
+    h2{
+        font-family: 'Shrikhand', cursive;
+    }
+
+    i{
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        font-size: 20px;
+        
+    }
+
+    .icone-coeur-vide{
+        color: black;
+            :hover{
+                color: #fff;
+                display: none;
+            }
+            i{
+                @include tablet{
+                    font-size: 24px;
+                    right: 25px;
+                    bottom: 28px;
+                }
+            }                     
+        }    
+
+        .icone-coeur-plein{
+            color: transparent;
+            
+            :hover{
+                color: $rose;
+                transform: scale(1.15);
+                transition: color 0.5s;
+            }
+            i{
+                right: 18px;
+                font-size: 24px;
+                bottom: -2px;
+                transform: scale(0.8);
+                transition-property: transform;
+                transition-duration: 1000ms;
+
+                @include tablet{
+                    right: 25px;
+                    bottom: 28px;
+                }
+                
+            }
+        }
+}
