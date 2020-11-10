@@ -1,10 +1,21 @@
 @import "_responsive.scss";
 
 $bold: 600;
+$grey: #f6f6f6;
 $violet: hsla(267, 66%, 60%, 1);
 $rose: hsla(317, 100%, 74%, 1);
 $turquoise: hsla(165, 56%, 74%, 1);
 $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+
+.header--sur{
+    position: relative;
+    i{
+        position: absolute;
+        left: 1em;
+        top: 0em;
+        font-size: 1.2em;
+    }
+}
 
 .bandeau-image{
     width: 100vw;
@@ -28,7 +39,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
     .title-restaurant{
 
-        background: #f6f6f6;
+        background: $grey;
         padding: 3vh;
         position: relative;
         // top: -3em;
@@ -89,10 +100,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
 .carte{
 
-    background: #f6f6f6;
+    background: $grey;
     position: relative;
     // top: -3em;
-    padding: 3vh;
+    padding: 2vh 3vh 1vh;
 
     h3{
         text-transform: uppercase;
@@ -140,9 +151,56 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 }
             }
         }
-
     }
+}
 
-    
+.call-to-action{
+
+    background: $grey;
+    padding-bottom: 6vh;
+
+    &__button{
+        background: rgb(147,86,220);
+        margin: 1em 5em;
+        padding: 15px 10px;
+        border-radius: 30px;
+        background: $degrade-rose;
+        text-align: center;
+        transform: scale(1);
+        transition: transform 300ms;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.15);  
+            
+            @include tablet{
+                transform: scale(1.10);
+            }
+        }
+
+        a{
+            color: #fff;
+            font-style: none;
+            text-decoration: none;  
+            font-weight: 400; 
+            font-size: 14px; 
+
+            @include tablet{
+                font-size: 25px;
+            }
+        }
+
+        @include tablet {
+            padding: 30px;
+            margin: 30px 40px;
+        }
+
+        @include lg{
+            margin: 30px 100px;
+        }
+        @include xl{
+            margin: 30px 130px;
+        }
+    }
 
 }
