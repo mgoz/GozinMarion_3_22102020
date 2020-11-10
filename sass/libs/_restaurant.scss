@@ -8,7 +8,9 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
 .bandeau-image{
     width: 100vw;
-
+    margin: 0;
+    position: relative;
+    z-index: 1;
     img{
         object-fit: cover;
         width: 100%;
@@ -17,57 +19,101 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
 }
 
-.title-restaurant{
+.box-title{
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    width: 100%;
+    
 
-    position: relative;
-    h2{
-        font-family: 'Shrikhand', cursive;
+    .title-restaurant{
+
+        background: #f6f6f6;
+        padding: 3vh;
+        position: relative;
+        // top: -3em;
+        border-radius: 40px 40px 0 0;
+        h2{
+            font-family: 'Shrikhand', cursive;
+            font-size: 25px;
+        }
+    
+        i{
+            position: absolute;
+            top: 3vh;
+            right: 8vh;
+            font-size: 30px;
+            
+        }
+    
+        .icone-coeur-vide{
+            color: black;
+                :hover{
+                    color: #fff;
+                    display: none;
+                }
+                i{
+                    @include tablet{
+                        font-size: 24px;
+                    }
+                }                     
+            }    
+    
+            .icone-coeur-plein{
+                color: transparent;
+                
+                :hover{
+                    color: $rose;
+                    transform: scale(1.15);
+                    transition: color 0.5s;
+                }
+                i{
+                    right: 8vh;
+                    font-size: 31px;
+                    top:3vh;
+                    transform: scale(0.8);
+                    transition-property: transform;
+                    transition-duration: 1000ms;
+    
+                    @include tablet{
+                        right: 8vh;
+                        top:3vh;
+                    }
+                    
+                }
+            }
     }
 
-    i{
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-        font-size: 20px;
+}
+
+
+.carte{
+
+    background: #f6f6f6;
+    position: relative;
+    // top: -3em;
+    padding: 3vh;
+
+    h3{
+        text-transform: uppercase;
+        font-weight: 100;
         
     }
 
-    .icone-coeur-vide{
-        color: black;
-            :hover{
-                color: #fff;
-                display: none;
-            }
-            i{
-                @include tablet{
-                    font-size: 24px;
-                    right: 25px;
-                    bottom: 28px;
-                }
-            }                     
-        }    
+    hr{
+        width: 2em;
+        height: 5px;
+        padding: 0;
+        background-color:$turquoise;
+        border: 0;
+    }
 
-        .icone-coeur-plein{
-            color: transparent;
-            
-            :hover{
-                color: $rose;
-                transform: scale(1.15);
-                transition: color 0.5s;
-            }
-            i{
-                right: 18px;
-                font-size: 24px;
-                bottom: -2px;
-                transform: scale(0.8);
-                transition-property: transform;
-                transition-duration: 1000ms;
+    &__theme--item{
+        background: #fff;
+        border-radius: 15px;
+        margin: 1vh 0vh;
+        padding: 1vh 2vh;
 
-                @include tablet{
-                    right: 25px;
-                    bottom: 28px;
-                }
-                
-            }
-        }
+    }
+
 }
