@@ -1,3 +1,3 @@
 setTimeout(() => {
-    document.querySelector('.loading').style.display = 'none';
-  }, 3000);
+    document.querySelector('.wrapper-spinner').style.display = 'none';
+  }, 3500);
