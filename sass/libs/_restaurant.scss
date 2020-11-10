@@ -108,12 +108,41 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         border: 0;
     }
 
-    &__theme--item{
-        background: #fff;
-        border-radius: 15px;
-        margin: 1vh 0vh;
-        padding: 1vh 2vh;
+    &__theme{
+
+        padding-bottom: 1em;
+
+        &--item{
+            background: #fff;
+            border-radius: 15px;
+            margin: 1vh 0vh;
+            padding: 2vh;
+            position: relative;
+            line-height: 1.3em;
+    
+            h4{
+                font-weight: 500;
+                font-size: 1.1em;
+            }
+    
+            &_prix{
+                position: absolute;
+                right: 1em;
+                top: 2em;
+            }
+    
+            &_select{
+                position: absolute;
+                right: 1em;
+                top: 1em;
+                i{
+                    color: $turquoise;
+                }
+            }
+        }
 
     }
+
+    
 
 }
