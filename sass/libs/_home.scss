@@ -210,9 +210,12 @@ a{
     transform: scale(1);
     transition: transform 300ms;
     cursor: pointer;
+    box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.32);
 
     &:hover{
-        transform: scale(1.15);  
+        transform: scale(1.05);  
+        box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.70);
+        transition: 0.5s;
         
         @include tablet{
             transform: scale(1.10);
@@ -270,7 +273,7 @@ a{
 
     .fonctionnement--container{
         margin: 2vh;
-        cursor: pointer;
+        cursor: pointer;  
 
         @include tablet{
             margin: 3vh 5vh 5vh 5vh;
@@ -291,6 +294,7 @@ a{
             padding: 3vh;
             border-radius: 20px;
             position: relative;
+            box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.32);
 
             @include tablet{
                 padding: 5vh;      
@@ -306,7 +310,8 @@ a{
 
             &:hover{
                 background: hsla(267, 66%, 60%, 0.33);
-                transition: background 0.5s;
+                box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.75);
+                transition: 0.5s;
                 
             }
 
@@ -412,6 +417,12 @@ a{
     background: #fff;
     margin: 2vh 0vh;
     border-radius: 15px;   
+    box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.32);
+
+    &:hover{
+        box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.70);
+        transition: 0.5s;
+    }
         
     @include tablet{
         margin: 2vh 0vh 5vh;
