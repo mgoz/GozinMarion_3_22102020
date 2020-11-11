@@ -39,6 +39,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     position: relative;
     z-index: 1;
 
+    @include landscape{
+        height: 70vh;
+    }
+
     @include tablet{
         height: 70vh;
     }
@@ -81,6 +85,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         padding: 0;
     }
 
+
     .title-restaurant{
 
         background: $grey;
@@ -93,6 +98,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             background: hsla(0, 0%, 96%, 0.65);
             // border-radius: 10px 10px 0;
 
+        }
+
+        @include landscape{
+            padding: 4vh;
         }
 
         h2{
@@ -167,7 +176,6 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
     background: $grey;
     position: relative;
-    // top: -3em;
     padding: 2vh 3vh 1vh;
 
     @include lg{
@@ -177,12 +185,15 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         flex-wrap: wrap;
     }
 
-
     h3{
         text-transform: uppercase;
         font-weight: 100;
 
         @include tablet{
+            margin: 1em 1em 0;
+        }
+
+        @include landscape{
             margin: 1em 1em 0;
         }
         
@@ -198,6 +209,9 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         @include tablet{
             margin: 0 1.3em 2em ;
         }
+        @include landscape{
+            margin: 0.2em 1.1em 1.3em ;
+        }
     }
 
     &__theme{
@@ -211,6 +225,16 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             padding: 2vh;
             position: relative;
             line-height: 1.3em;
+            box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.23);
+
+            &:hover{
+                box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.63);
+                transition: 0.5s;
+            }
+
+            @include landscape{
+                margin: 3vh;
+            }
 
             @include lg{
                 width: 18em;
@@ -225,6 +249,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
             @include xl{
                 width: 23em;
+                margin: 5vh 2vh;
             }
     
             h4{
@@ -248,6 +273,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
                 @include tablet{
                     font-size: 1.2em;
+                }
+
+                @include landscape{
+                    top:1em;
                 }
             }
     
@@ -273,6 +302,11 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     background: $grey;
     padding-bottom: 6vh;
 
+    @include xl{
+        display: flex;
+        justify-content: center;
+    }
+
     &__button{
         background: rgb(147,86,220);
         margin: 1em 5em;
@@ -283,9 +317,12 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         transform: scale(1);
         transition: transform 300ms;
         cursor: pointer;
+        box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.23);
 
         &:hover{
-            transform: scale(1.15);  
+            transform: scale(1.05); 
+            box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.70); 
+            transition: 0.5s;
             
             @include tablet{
                 transform: scale(0.9);
@@ -315,6 +352,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         }
         @include xl{
             margin: 30px 130px;
+            width: 30em;
         }
     }
 
