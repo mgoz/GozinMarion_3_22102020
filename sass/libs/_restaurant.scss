@@ -7,6 +7,50 @@ $rose: hsla(317, 100%, 74%, 1);
 $turquoise: hsla(165, 56%, 74%, 1);
 $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 
+@-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+ 
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ @-webkit-keyframes fadeInLeft2 {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(-60px);
+    }
+ }
+ 
+ @keyframes fadeInLeft2 {
+    0% {
+       opacity: 0;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(-60px);
+    }
+ }
+
 
 .header--sur{
     position: relative;
@@ -106,7 +150,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
         h2{
             font-family: 'Shrikhand', cursive;
-            font-size: 2em;
+            font-size: 1.5em;
 
             @include tablet{
                 font-size: 2em;
@@ -246,6 +290,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                         animation-timing-function: ease-in;
                 -webkit-animation-duration: 1s;
                         animation-duration: 1s;
+                        animation-fill-mode: forwards;
                         
             }
             
@@ -274,8 +319,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                         animation-iteration-count: 1;
                 -webkit-animation-timing-function: ease-in;
                         animation-timing-function: ease-in;
-                -webkit-animation-duration: 2s;
-                        animation-duration: 2s;
+                -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        animation-delay: 1s;
+                        animation-fill-mode: forwards;
                      
             }
             
@@ -305,16 +352,18 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                         animation-iteration-count: 1;
                 -webkit-animation-timing-function: ease-in;
                         animation-timing-function: ease-in;
-                -webkit-animation-duration: 3s;
-                        animation-duration: 3s;
+                -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        animation-delay: 2s;
+                        animation-fill-mode: forwards;
                        
             }
             
             @-webkit-keyframes fadeInOpacity {
-                0% {
+                from {
                     opacity: 0;
                 }
-                100% {
+                to {
                     opacity: 1;
                 }
             }
@@ -328,7 +377,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 }
             }
 
-            
+            opacity: 0;
             background: #fff;
             border-radius: 15px;
             margin: 2vh 0vh;
@@ -341,6 +390,27 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.63);
                 transition: 0.5s;
             }
+
+            &:hover > &_select{
+
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-name: fadeInLeft;
+                animation-name: fadeInLeft;
+                animation-fill-mode: forwards;
+                  
+            }
+
+            &:hover > &_prix{
+
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-name: fadeInLeft2;
+                animation-name: fadeInLeft2;
+                animation-fill-mode: forwards;
+                  
+            }
+
 
             @include landscape{
                 margin: 3vh;
@@ -374,6 +444,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 @include lg{
                     font-size: 1.2em;
                 }
+
             }
     
             &_prix{
@@ -393,15 +464,19 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     
             &_select{
                 position: absolute;
-                right: 1em;
-                top: 1em;
+                right: 0em;
+                top: 0em;
+                opacity: 0;
+                background: $turquoise;
+                padding: 1.5em;
+                border-radius: 0 15PX 15px 0;
 
                 @include tablet{
                     top: 2.5em;
                 }
 
                 i{
-                    color: $turquoise;
+                    color: #fff;
                 }
             }
         }
