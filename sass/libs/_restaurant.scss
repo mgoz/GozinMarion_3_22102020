@@ -10,7 +10,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 @-webkit-keyframes fadeInLeft {
     0% {
        opacity: 0;
-       -webkit-transform: translateX(20px);
+       -webkit-transform: translateX(10px);
     }
     100% {
        opacity: 1;
@@ -21,7 +21,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
  @keyframes fadeInLeft {
     0% {
        opacity: 0;
-       transform: translateX(20px);
+       transform: translateX(10px);
     }
     100% {
        opacity: 1;
@@ -382,6 +382,11 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             border-radius: 15px;
             margin: 2vh 0vh;
             padding: 2vh;
+            height: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
             position: relative;
             line-height: 1.3em;
             box-shadow: 1px -1px 22px 1px rgba(143,143,143,0.23);
@@ -398,7 +403,17 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 -webkit-animation-name: fadeInLeft;
                 animation-name: fadeInLeft;
                 animation-fill-mode: forwards;
-                  
+
+                i{
+
+                    animation:spin 0.5s linear;
+
+                    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+                    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+                    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+                }
+                
             }
 
             &:hover > &_prix{
@@ -414,22 +429,26 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
             @include landscape{
                 margin: 3vh;
+                height: 15vh;
             }
 
             @include lg{
                 width: 18em;
                 padding: 2vh;
                 margin: 3vh 0vh;
+                
             }
 
             @include tablet{
-                padding: 4vh;
-                margin: 2vh
+                // padding: 2vh;
+                margin: 2vh;
+                height: 10vh;
             }
 
             @include xl{
                 width: 23em;
                 margin: 5vh 2vh;
+                height: 15vh;
             }
     
             h4{
@@ -468,15 +487,26 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 top: 0em;
                 opacity: 0;
                 background: $turquoise;
-                padding: 1.5em;
+                // padding: 3.5vh;
+                height: 100%;
+                width: 20%;
                 border-radius: 0 15PX 15px 0;
 
-                @include tablet{
-                    top: 2.5em;
+                @include xl{
+                    top:0;
                 }
 
                 i{
                     color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 1.5em;
+
+                    @include xl{
+                        font-size: 2em;
+                    }
                 }
             }
         }
