@@ -547,6 +547,12 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 width: 100%;
+                font-size: 0.9em;
+                line-height: 1.8em;
+
+                @include lg{
+                    font-size: 1em;
+                }
             }
     
             &_prix{
@@ -555,7 +561,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 top: 5vh;
                 font-weight: $bold;
                 background: #fff;
-                padding: 0vh 0vh 0vh 3vh;
+                padding: 0vh 0vh 0vh 1vh;
 
                 @include tablet{
                     font-size: 1.2em;
