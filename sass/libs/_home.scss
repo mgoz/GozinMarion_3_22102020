@@ -16,7 +16,8 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
 
   .wrapper-spinner{
     position: fixed;
-    z-index: 99;
+    display: block;
+    z-index: 1;
     height: 100%;
     width: 100%;
     overflow: visible;
@@ -55,6 +56,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
   opacity: 0;
     &.spinner6{
         position: absolute;
+        opacity: 0;
         top: 45%;
         left: 50%;
         background: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
@@ -154,7 +156,7 @@ a{
         font-size: 16px;
 
         @include lg{
-            background: #fff;
+            // background: #fff;
             font-size: 20px;
         }
 
@@ -263,15 +265,15 @@ a{
 }
 
 #fonctionnement{
-    margin: 6vh 3vh;
-
+    padding: 6vh 3vh;
+    background: #ffff;
 
     @include tablet{
-        margin: 6vh 3vh 9vh 3vh;
+        padding: 6vh 3vh 9vh 3vh;
     }
 
     @include lg{
-        margin: 3vh;
+        padding: 3vh;
     }
 
     h2{
