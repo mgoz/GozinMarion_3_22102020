@@ -101,6 +101,10 @@ footer{
       @include landscape{
         line-height: 6vh;
       }
+
+      @include lg{
+        padding-top: 1vh;
+      }
   }
 
   img{

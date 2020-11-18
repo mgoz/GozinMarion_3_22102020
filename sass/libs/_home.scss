@@ -243,7 +243,7 @@ a{
         margin: 30px 100px;
     }
     @include xl{
-        margin: 30px 130px;
+        margin: 30px 50vh;
     }
 }
 
@@ -390,7 +390,7 @@ a{
     }
 
     @include lg{
-        padding-top: 8vh;
+        padding: 8vh;
     }
     h2 {
         @include xl{
