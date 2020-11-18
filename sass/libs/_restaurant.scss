@@ -138,24 +138,13 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         height: 40vw;
     }
 
-    @include xl{
 
-            background-attachment: fixed;
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-            min-height: 30vw;
-            background-image: url('../../images/restaurants/la-palette-du-gout.jpg');
-    }
 
     img{
         object-fit: cover;
         width: 100%;
         height: 100%;  
 
-        @include xl{
-            display: none;
-        }
     }
 
 }
@@ -455,6 +444,11 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 width: 60%;
             }
 
+            &:hover > h4{
+                width: 80%;
+            }
+
+
             &:hover > &_select{
 
                 -webkit-animation-duration: 1s;
@@ -530,6 +524,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             h4{
                 font-weight: 500;
                 font-size: 1.1em;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
 
                 @include tablet{
                     font-size: 1.2em;
