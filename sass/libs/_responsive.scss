@@ -11,7 +11,7 @@ $screen-xl-min: 1200px;
   
  // Medium devices
  @mixin tablet {
-    @media (min-width: #{$screen-tablet-min}) {
+    @media (min-width: #{$screen-tablet-min}){
         @content;
     }
  }
@@ -31,8 +31,14 @@ $screen-xl-min: 1200px;
  }
 
 @mixin landscape{ 
- @media all and (orientation:landscape) {
+ @media (max-width: 1100px) and (orientation:landscape) {
         @content;
   }
 }  
+
+// @mixin tablet-landscape {
+//     @media (min-width: #{$screen-tablet-min}) and (max-width: 900px) and (orientation:landscape) {
+//         @content;
+//     }
+//  }
   

@@ -36,7 +36,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     }
     100% {
        opacity: 1;
-       -webkit-transform: translateX(-60px);
+       -webkit-transform: translateX(-15vw);
     }
  }
  
@@ -47,11 +47,53 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     }
     100% {
        opacity: 1;
-       transform: translateX(-60px);
+       transform: translateX(-15vw);
     }
  }
 
+ @-webkit-keyframes fadeInLeft2-lg {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(-10vw);
+    }
+ }
+ 
+ @keyframes fadeInLeft2-lg {
+    0% {
+       opacity: 0;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(-10vw);
+    }
+ }
 
+ @-webkit-keyframes fadeInLeft2-xl {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(-9vh);
+    }
+ }
+ 
+ @keyframes fadeInLeft2-xl {
+    0% {
+       opacity: 0;
+       transform: translateX(0px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(-9vh);
+    }
+ }
 .header--sur{
     position: relative;
     i{
@@ -148,6 +190,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             padding: 4vh;
         }
 
+        @include tablet{
+            text-align: center;
+        }
+
         h2{
             font-family: 'Shrikhand', cursive;
             font-size: 1.5em;
@@ -230,11 +276,19 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
     position: relative;
     padding: 2vh 3vh 1vh;
 
-    @include lg{
+    @include xl{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
+    }
+
+    @include lg{
+        padding: 3vh 20vh;
+    }
+
+    @include tablet{
+        padding: 1vh 10vh;
     }
 
     h3{
@@ -273,6 +327,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
             margin: 0.2em 2em 1.3em ;
             width: 4em;
         }
+
     }
 
     &__theme{
@@ -396,6 +451,10 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 transition: 0.5s;
             }
 
+            &:hover > &_description{
+                width: 60%;
+            }
+
             &:hover > &_select{
 
                 -webkit-animation-duration: 1s;
@@ -423,26 +482,43 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 -webkit-animation-name: fadeInLeft2;
                 animation-name: fadeInLeft2;
                 animation-fill-mode: forwards;
+
+                @include tablet{
+                    -webkit-animation-name: fadeInLeft2;
+                animation-name: fadeInLeft2;
+                }
+
+                @include lg{
+                    -webkit-animation-name: fadeInLeft2-lg;
+                animation-name: fadeInLeft2-lg;
+                }
+
+                @include xl{
+                    -webkit-animation-name: fadeInLeft2-xl;
+                animation-name: fadeInLeft2-xl;
+                }
+
+                @include landscape{
+                    -webkit-animation-name: fadeInLeft2-lg;
+                animation-name: fadeInLeft2-lg;
+                }
                   
             }
 
 
             @include landscape{
                 margin: 3vh;
-                height: 15vh;
+                height: 30vh;
             }
 
             @include lg{
-                width: 18em;
                 padding: 2vh;
-                margin: 3vh 0vh;
-                
+                height: 10vh;
             }
 
             @include tablet{
-                // padding: 2vh;
                 margin: 2vh;
-                height: 10vh;
+                height: 6em;
             }
 
             @include xl{
@@ -465,12 +541,21 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 }
 
             }
+
+            &_description{
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 100%;
+            }
     
             &_prix{
                 position: absolute;
                 right: 1em;
                 top: 2em;
                 font-weight: $bold;
+                background: #fff;
+                padding: 0vh 0vh 0vh 3vh;
 
                 @include tablet{
                     font-size: 1.2em;
@@ -492,8 +577,14 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
                 width: 20%;
                 border-radius: 0 15PX 15px 0;
 
+                @include landscape{
+                    width: 12%;
+                }
+
+
                 @include xl{
                     top:0;
+                    width: 20%;
                 }
 
                 i{
