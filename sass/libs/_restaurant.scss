@@ -186,6 +186,7 @@ $degrade-rose: linear-gradient(6deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 
         h2{
             font-family: 'Shrikhand', cursive;
             font-size: 1.5em;
+            letter-spacing: 0.05em;
 
             @include tablet{
                 font-size: 2em;
