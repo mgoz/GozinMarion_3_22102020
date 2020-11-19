@@ -500,6 +500,10 @@ a{
 
             @include tablet{
                 padding: 2vh 3vh;
+                line-height: 6vh;
+            }
+
+            @include lg{
                 line-height: 3vh;
             }
 

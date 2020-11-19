@@ -400,6 +400,7 @@ a {
 
 .btn-explorer a {
   color: #fff;
+  font-style: none;
   text-decoration: none;
   font-weight: 400;
   font-size: 14px;
@@ -736,6 +737,12 @@ a {
 @media (min-width: 768px) {
   .restaurants__container--carte--texte {
     padding: 2vh 3vh;
+    line-height: 6vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .restaurants__container--carte--texte {
     line-height: 3vh;
   }
 }
@@ -1201,6 +1208,7 @@ a {
           flex-direction: column;
   -webkit-box-align: left;
       -ms-flex-align: left;
+          align-items: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1589,6 +1597,7 @@ a {
 
 .call-to-action__button a {
   color: #fff;
+  font-style: none;
   text-decoration: none;
   font-weight: 400;
   font-size: 14px;
