@@ -810,6 +810,24 @@ a {
   font-size: 20px;
 }
 
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -1198,7 +1216,7 @@ a {
   border-radius: 15px;
   margin: 2vh 0vh;
   padding: 2vh;
-  height: 10vh;
+  min-height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,7 +1231,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  line-height: 1.3em;
+  line-height: 1.5em;
   -webkit-box-shadow: 1px -1px 22px 1px rgba(143, 143, 143, 0.23);
           box-shadow: 1px -1px 22px 1px rgba(143, 143, 143, 0.23);
 }
@@ -1231,24 +1249,6 @@ a {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .carte__theme--item.fade-in2 {
   -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
@@ -1264,25 +1264,6 @@ a {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .carte__theme--item.fade-in3 {
   -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
@@ -1296,24 +1277,6 @@ a {
           animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeInOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .carte__theme--item:hover {
